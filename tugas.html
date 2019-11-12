@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Are you Smarter than fifth grade</title>
+    <style>
+      form{
+        padding : 30px
+      }
+    </style>
+    
+  </head>
+  <body>
+    <center>
+      <h2>Are You Smarter Than Fifth Grader</h2>
+      <form >
+        <h3>1. Waktu berikut ini yang paling lama adalah ... </h3>
+        <input 
+          type = "radio"
+          name = 'Soal1'
+          value = 'lustrun'
+        >
+        Lustrum
+        <input 
+          type = 'radio'
+          name = "Soal1"
+          value = 'abad'
+        >
+        Abad
+        <input 
+          type = 'radio'
+          name = 'Soal1'
+          value = "milenium" 
+        >
+        Milenium
+        <input 
+          type = 'radio'
+          name = 'Soal1'
+          value = 'dasawarsa'
+        >
+        Dasawarsa 
+        <br>
+        <h3>2. Katak dewasa bernafas dengan menggunakan ... </h3>
+        <input 
+          type = "radio"
+          name = 'Soal2'
+          value = 'paru-paru'
+        >
+        Paru - paru
+        <input 
+          type = 'radio'
+          name = "Soal2"
+          value = 'kulit'
+        >
+        Kulit
+        <input 
+          type = 'radio'
+          name = 'Soal2'
+          value = "insang" 
+        >
+        Insang
+        <input 
+          type = 'radio'
+          name = 'Soal2'
+          value = 'trakea'
+        >
+        Trakea
+        <br>
+        <h3>3. Pramuka adalah singkatan dari ... </h3>
+        <input 
+          type = "radio"
+          name = 'Soal3'
+          value = 'praja muda karana'
+        >
+        Praja muda karana
+        <input 
+          type = 'radio'
+          name = "Soal3"
+          value = 'praka muda kelana'
+        >
+        Praja muda kelana
+        <input 
+          type = 'radio'
+          name = 'Soal3'
+          value = "praja muda pratika" 
+        >
+        Praja muda Kartika
+        <input 
+          type = 'radio'
+          name = 'Soal3'
+          value = 'pasukan muda kelana'
+        >
+        Pasukan muda kelana
+        <br>
+        <h3>4. Sungai terpanjang di Indonesia adalah sungai ... </h3>
+        <input 
+          type = "radio"
+          name = 'Soal4'
+          value = 'barito'
+        >
+        Barito
+        <input 
+          type = 'radio'
+          name = "Soal4"
+          value = 'kapuas'
+        >
+        Kapuas
+        <input 
+          type = 'radio'
+          name = 'Soal4'
+          value = "musi" 
+        >
+        Musi
+        <input 
+          type = 'radio'
+          name = 'Soal4'
+          value = 'bengawan solo'
+        >
+        Bengawan Solo
+        <br>
+        <h3>5. Which continent is the least populated ... </h3>
+        <input 
+          type = "radio"
+          name = 'Soal5'
+          value = 'asia'
+        >
+        Asia
+        <input 
+          type = 'radio'
+          name = "Soal5"
+          value = 'afrika'
+        >
+        Afrika
+        <input 
+          type = 'radio'
+          name = 'Soal5'
+          value = "antartica" 
+        >
+        Antartica
+        <input 
+          type = 'radio'
+          name = 'Soal5'
+          value = 'arctic'
+        >
+        Arctic 
+        <br>
+        <br>
+        <input type="button" value="Submit" onclick="Quiz()">
+      </form>
+      <p id ='hasil'></p>
+    </center>
+    <script>
+        function Quiz(){
+          //event.preventDefault()
+          let Soal1 = document.getElementsByName('Soal1');
+          let Soal2 = document.getElementsByName('Soal2');
+          let Soal3 = document.getElementsByName('Soal3');
+          let Soal4 = document.getElementsByName('Soal4');
+          let Soal5 = document.getElementsByName('Soal5');
+          let nilai = 0;
+          if(Soal1[2].checked){
+            nilai += 20
+          }
+          if(Soal2[0].checked){
+            nilai += 20
+          }
+          if(Soal3[0].checked){
+            nilai += 20
+          }
+          if(Soal4[1].checked){
+            nilai += 20
+          }
+          if(Soal5[2].checked){
+            nilai += 20
+          }
+          if(nilai == 100){
+  }
+  else if(nilai == 80 ){
+    document.getElementById('hasil').innerHTML = 'Nilai : ' + nilai + ' Selamat Kamu Sepintar Kelas 6'
+  }
+  else if(nilai == 60 ){
+    document.getElementById('hasil').innerHTML = ` Nilai : ${nilai} Ulang kelas 5 lagi ya!!`
+  }
+  else if(nilai == 40){
+    document.getElementById('hasil').innerHTML = ` Nilai : ${nilai} Belajar lagi di kelas 4!!`
+  }
+  else if(nilai === 20){
+    document.getElementById('hasil').innerHTML = ` Nilai : ${nilai} Anak Kelas 1 Jangan Main Kesin`
+  }
+  else{
+    document.getElementById('hasil').innerHTML = ` Nilai : ${nilai} Tetap Semangat ya!!`
+  }
+        }
+    </script>    
+  </body>
+  
+</html>
